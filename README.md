@@ -1,4 +1,4 @@
-# LineSight Diagnostic Engine
+# Vomtek Diagnostic Engine
 
 FastAPI compute service for ILI screening and homeowner visual triage.
 

@@ -1,4 +1,4 @@
-"""LineSight diagnostic engine.
+"""Vomtek diagnostic engine.
 
 A deterministic implementation of the proposal's ILI triage and homeowner
 video assessment contracts. It is deliberately model-light for the MVP:
@@ -16,7 +16,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-app = FastAPI(title="LineSight Diagnostic Engine", version="1.0.0")
+app = FastAPI(title="Vomtek Diagnostic Engine", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -143,7 +143,7 @@ def analyze_ili(req: IliRequest) -> dict[str, Any]:
 
 @app.get("/health")
 def health() -> dict[str, str]:
-    return {"status": "ok", "service": "linesight-engine", "version": "1.0.0"}
+    return {"status": "ok", "service": "vomtek-platform-engine", "version": "1.0.0"}
 
 
 @app.post("/v1/ili/analyze")
